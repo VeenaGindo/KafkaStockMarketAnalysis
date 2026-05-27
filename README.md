@@ -14,7 +14,7 @@ The messaging core features an **Apache Kafka** cluster running inside an **AWS 
 ## 🏗️ System Architecture
 The blueprint below outlines the decoupled architecture and event distribution flow:
 
-![Stock Market Kafka Architecture](./architecture-diagram.png)
+![Stock Market Kafka Architecture](./architecture_diagram.png)
 
 ### Core Data Life Cycle:
 1. **Simulation & Production (Python):** Loads historical stock market indices from a local CSV data node, converts records randomly or sequentially into dynamic JSON payloads, and pushes them safely to a Kafka topic.
