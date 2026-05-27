@@ -44,13 +44,13 @@ The blueprint below outlines the decoupled architecture and event distribution f
 
 ```bash
 # Update repository index and install Java JDK
-sudo apt-get update
-sudo apt-get install openjdk-11-jdk -y
+sudo yum update
+sudo yum install java-17-amazon-corretto -y
 
 # Download and extract Apache Kafka binaries
-wget [https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz](https://archive.apache.org/dist/kafka/3.3.1/kafka_2.13-3.3.1.tgz)
-tar -xzf kafka_2.13-3.3.1.tgz
-cd kafka_2.13-3.3.1
+wget https://downloads.apache.org/kafka/4.3.0/kafka_2.13-4.3.0.tgz
+tar -xvf kafka_2.13-4.3.0.tgz
+cd kafka_2.13-4.3.0
 
 🔧 Public IP Configuration Change
 By default, Kafka points to the private server interface. To allow remote clients (like your local Python scripts) to interact with the broker, you must modify the properties file so it resolves to your public EC2 IP address (13.234.117.110).
